@@ -49,6 +49,12 @@
 	</properties>
 	
 	<repositories>
+
+		<repository>
+			<id>spigot-repo</id>
+			<url>https://hub.spigotmc.org/nexus/content/repositories/snapshots/</url>
+		</repository>
+
 		<!-- DO NOT EDIT, used to pull Foundation from the JitPack site. -->
 		<repository>
 			<id>jitpack.io</id>
@@ -65,7 +71,14 @@
 	</pluginRepositories>
 	
 	<dependencies>
-		
+
+
+		<dependency>
+			<groupId>org.spigotmc</groupId>
+			<artifactId>spigot-api</artifactId>
+			<version>1.19.2-R0.1-SNAPSHOT</version>
+			<scope>provided</scope>
+		</dependency>
 		<!-- (Optional) Access the server jar for NMS (groupId, artifactId and version do not matter,
 			 but keep version in artifactId and not in version if using multiple NMS imports,
 			 otherwise Maven will fail to import them correctly).
@@ -91,7 +104,10 @@
 			<version>${foundation.version}</version>
 		</dependency>
 	</dependencies>
-	
+
+
+
+
 	<!-- DO NOT EDIT unless instructed to do so or you know what you're doing. -->
 	<build>
 		<finalName>${project.name}-${project.version}</finalName>
